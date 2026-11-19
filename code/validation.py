@@ -13,15 +13,16 @@ def validate_twin(twin, label):
     """
     Run validation checks on a simulated Digital Twin.
     
-    Checks:
+    Checks (5 invariant categories across 9 individual checks):
     1. Inventory never negative
     2. Inventory never exceeds warehouse capacity
     3. Revenue = Units Sold × Selling Price
     4. Purchase cost is non-negative
-    5. Shipping cost proportional to units sold
-    6. Holding cost proportional to remaining inventory
-    7. Stockouts within [0, Demand] bounds
-    8. Profit formula consistency
+    5. Purchase cost > 0 only when orders placed
+    6. Shipping cost proportional to units sold
+    7. Holding cost proportional to remaining inventory
+    8. Stockouts within [0, Demand] bounds
+    9. Profit formula consistency (Profit = Revenue - Purchase - Holding - Shipping - Transfer)
     
     Args:
         twin: BusinessDigitalTwin with completed simulation history.

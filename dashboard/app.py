@@ -495,7 +495,7 @@ elif page == "✅ Validation":
     pred_df, future_dates = forecast_future(df, model)
     scenario_twins, kpi_table, twin_s1, twin_s2, twin_s3 = run_all_scenarios(pred_df, future_dates)
 
-    st.subheader("🔍 8 Integrity Checks × 3 Scenarios = 24 Total Checks")
+    st.subheader("🔍 9 Integrity Checks (5 Invariant Categories) × 3 Scenarios = 27 Total Checks")
     st.markdown("---")
 
     checks = [
@@ -563,6 +563,6 @@ elif page == "✅ Validation":
 
     st.markdown("---")
     if all_pass:
-        st.success("## ✅ ALL 24+ CHECKS PASSED — Simulation is mathematically verified!")
+        st.success("## ✅ ALL 27 CHECKS PASSED — Simulation is mathematically verified!")
     else:
         st.error("## ❌ SOME CHECKS FAILED — Review simulation logic.")

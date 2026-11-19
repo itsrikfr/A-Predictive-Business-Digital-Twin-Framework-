@@ -33,7 +33,7 @@ code/
 | `simulation.py` | Factory for fresh twin instances, demand lookup builder, day-by-day simulation loop, and scenario transfer policies |
 | `kpi.py` | Computes Revenue, Profit, Costs, Stockouts, Service Level, Fill Rate, Utilization, Inventory Turnover. Auto-determines best policy |
 | `visualization.py` | 5 EDA plots (demand trend, inventory, revenue, monthly seasonality, correlation heatmap) + scenario comparison charts and KPI dashboard |
-| `validation.py` | 8 integrity checks per scenario (non-negative inventory, capacity limits, revenue formula, cost formulas, profit formula, etc.) |
+| `validation.py` | 9 integrity checks across 5 invariant categories per scenario (non-negative inventory, capacity limits, revenue formula, cost formulas, profit formula) |
 | `main.py` | Orchestrates the full pipeline from data generation through validation and conclusion |
 
 ## Three Scenarios Simulated
